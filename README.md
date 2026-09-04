@@ -8,3 +8,5 @@
 # CSS Adaptable a todo dispositivo
 # Menú sin refinar.
 ### ---------- ###
+# Día 04-09-26
+# Head y footer a los HTML.
