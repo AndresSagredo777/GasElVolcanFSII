@@ -16,3 +16,4 @@
 # Producto.HTML listo
 # Se agregaron las fotos correspondientes.
 # Se arreglo la lista de productos.
+# Correcion de detalles minimos.
