@@ -10,3 +10,5 @@
 ### ---------- ###
 # Día 04-09-26
 # Head y footer a los HTML.
+# Día 05-09-26
+# Main de producto con los cilindros de gas.
