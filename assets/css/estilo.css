@@ -21,24 +21,20 @@ body {
     line-height: 1.6;
 }
 
-
-/* Configuración para celular*/
-
-
-.salto-contenido {
+.texto-oculto {
     position: absolute;
-    left: -999px;
-    top: 0;
-    background: var(--color-secundario);
-    color: var(--color-blanco);
-    padding: 0.5rem 1rem;
-    z-index: 100;
-}
-.salto-contenido:focus {
-    left: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
 }
 
-.cabecera-sitio {
+/* ============================================================
+   Configuración para CELULAR
+============================================================ */
+
+.cabecera {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,6 +45,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 10;
+    position: relative;
 }
 
 .marca {
@@ -58,13 +55,70 @@ body {
     text-decoration: none;
 }
 
+.salto-contenido {
+    position: absolute;
+    left: -999px;
+    top: 0;
+    background: var(--color-secundario);
+    color: var(--color-blanco);
+    padding: 0.5rem 1rem;
+    z-index: 100;
+}
+
+.salto-contenido:focus {
+    left: 0;
+}
+
+.boton-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+
+.linea-menu {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--color-secundario);
+    border-radius: 2px;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.boton-menu.activo .linea-menu:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
+}
+
+.boton-menu.activo .linea-menu:nth-child(2) {
+    opacity: 0;
+}
+
+.boton-menu.activo .linea-menu:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
+}
+
 .menu {
     list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 0.8rem 1.2rem;
+    display: none;   
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 0.8rem;
     font-size: 0.95rem;
+    padding-top: 0.5rem;
+}
+
+.menu.menu-abierto {
+    display: flex;
 }
 
 .menu a {
@@ -107,6 +161,34 @@ body {
     margin: 0 auto 1.5rem auto;
     color: #dbe4ee;
     font-size: 0.95rem;
+}
+
+.grilla-valores {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+    padding: 0 1rem;
+    margin: 2rem auto;
+}
+
+.valor {
+    background: var(--color-blanco);
+    border-radius: 10px;
+    padding: 1.2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-top: 4px solid var(--color-primario);
+    text-align: center;
+}
+
+.valor h3 {
+    color: var(--color-secundario);
+    font-size: 1.05rem;
+    margin-bottom: 0.5rem;
+}
+
+.valor p {
+    font-size: 0.9rem;
+    color: #555;
 }
 
 .boton {
@@ -223,8 +305,10 @@ section[aria-labelledby="titulo-productos"] h2 {
     color: var(--color-primario);
 }
 
-/* Configuración para tablet */
-        
+/* ============================================================
+   Configuración para TABLET
+============================================================ */
+
 @media (min-width: 600px) {
 .cabecera-sitio {
     flex-direction: row;
@@ -260,18 +344,32 @@ section[aria-labelledby="titulo-productos"] h2 {
     }
 }
 
-/* Configuración para escritorio */
+/* ============================================================
+   Configuración para ESCRITORIO
+============================================================ */
 
 @media (min-width: 900px) {
-.cabecera-sitio {
-    padding: 1rem 2rem;
-}
+    .cabecera-sitio {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2.5rem;
+        padding: 1rem 2rem;
+        text-align: left;
+    }
 
 .marca {
     font-size: 1.4rem;
 }
 
+.boton-menu {
+    display: none;
+}
+
 .menu {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    padding-top: 0;
     font-size: 1rem;
 }
 
@@ -288,17 +386,7 @@ section[aria-labelledby="titulo-productos"] {
     padding: 0 1.5rem;
 }
 
-.grilla-tarjetas {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-}
-
-.aviso {
-    max-width: 900px;
-    padding: 1.5rem 2rem;
-}
-
-.aviso h2 {
-    font-size: 1.3rem;
+.grilla-valores {
+    max-width: 1100px;
 }
 }

@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,23 +9,59 @@
     <link rel="stylesheet" href="assets/css/estilo.css">
 </head>
 
-<header class="cabecera">
-    <a class="marca" href="index.html">Gas El Volcan</a>
-    <nav aria-label="Navegacion principal">
-        <ul class="menu">
-            <li>><a href="index.html">Inicio</a></li>
-            <li><a href="nosotros.html" aria-current="page">Nosotros</a></li>
-            <li><a href="productos.html">Productos</a></li>
-            <li><a href="cobertura.html">Cobertura</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
-</header>
+<body>
+    <header class="cabecera">
+        <a class="marca" href="index.html">Gas El Volcan</a>
+        <button class="boton-menu" id="boton-menu" aria-expanded="false" aria-controls="menu-principal">
+            <span class="linea-menu"></span>
+            <span class="linea-menu"></span>
+            <span class="linea-menu"></span>
+            <span class="texto-oculto">Abrir menú</span>
+        </button>
+        <nav aria-label="Navegacion principal">
+            <ul class="menu" id="menu-principal">
+                <li>><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html" aria-current="page">Nosotros</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="cobertura.html">Cobertura</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<footer class="pie-sitio">
-    <p><strong>Gas El Volcan</strong></p>
-    <address>Contacto: <a href="mailto:contacto@gaselvolcan.cl">contacto@gaselvolcan.cl</a></address>
-    <p><small>· 9 9999 9999</small></p>
-    <p><small>Proyecto académico · Desarrollo FullStack II</small></p>
-</footer>
+    <main id="contenido-principal">
+        <section class="presentacion">
+            <p class="etiqueta">Gas a domicilio</p>
+            <h1>¿Quienes somos?</h1>
+            <p>Distribución de cilindros de gas licuado con entrega rápida y segura.</p>
+        </section>
+
+        <section aria-labelledby="titulo-valores">
+            <h2 id="titulo-valores" class="texto-oculto">Misión, visión y valores</h2>
+            <div class="grilla-valores">
+                <article class="valor mision">
+                    <h3>Misión</h3>
+                    <p>Entregar gas licuado de forma segura, puntual y accesible a cada hogar y negocio de la comuna.</p>
+                </article>
+                <article class="valor vision">
+                    <h3>Visión</h3>
+                    <p>Ser la distribuidora de gas más confiable de la región, reconocida por su cercanía con la comunidad.</p>
+                </article>
+                <article class="valor valores">
+                    <h3>Valores</h3>
+                    <p>Seguridad, puntualidad y respeto por nuestros clientes y colaboradores en cada entrega.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/menu.js"></script>
+
+    <footer class="pie-sitio">
+        <p><strong>Gas El Volcan</strong></p>
+        <address>Contacto: <a href="mailto:contacto@gaselvolcan.cl">contacto@gaselvolcan.cl</a></address>
+        <p><small>· 9 9999 9999</small></p>
+        <p><small>Proyecto académico · Desarrollo FullStack II</small></p>
+    </footer>
 </body>
+</html>
