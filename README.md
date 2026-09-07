@@ -8,5 +8,20 @@
 # CSS Adaptable a todo dispositivo
 # Menú sin refinar.
 ### ---------- ###
-# Día 04-03-26
-# Header y footer en todos los htmls actuales
+# Día 04-09-26
+# Head y footer a los HTML.
+### ---------- ###
+# Día 05-09-26
+# Main de producto con los cilindros de gas.
+# Main de pruducto con los accesorios.
+# Producto.HTML listo
+# Se agregaron las fotos correspondientes.
+# Se arreglo la lista de productos.
+# Correcion de detalles minimos.
+### ---------- ###
+# Día 07-09-26
+# Creacion de carrito.js y completado al 100.
+# Se agrego stock en productos.
+# Carrito.HTML completado.
+# Css de producto y carrito implementado al 100.
+# Formulario de pago con tarjeta y datos del comprador implementado.

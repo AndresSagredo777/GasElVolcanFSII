@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carrito de compras - Gas El Volcan">
+    <title>Carrito | Gas El Volcan</title>
+    <link rel="stylesheet" href="assets/css/estilo.css">
+</head>
+
+<body>
+    <!-- Enlace de salto de contenido para accesibilidad -->
+    <a href="#contenido-carrito" class="salto-contenido">Saltar al contenido principal</a>
+
+    <header class="cabecera">
+        <a class="marca" href="index.html">Gas El Volcan</a>
+        <nav aria-label="Navegacion principal">
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="cobertura.html">Cobertura</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="carrito.html" aria-current="page">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido-carrito" class="contenedor-principal">
+        <h1>Tu Carrito de Compras</h1>
+        
+        <div class="disposicion-carrito">
+            <!-- Lista de productos añadidos -->
+            <section class="lista-carrito" aria-label="Productos en tu carrito">
+                
+                <!-- Producto 1 -->
+                <article class="item-carrito">
+                    <img src="assets/img/cilindro11kg.png" alt="Cilindro de gas de 11 kilogramos">
+                    <div class="detalles-item">
+                        <h3>Cilindro GLP 11 kg</h3>
+                        <p class="precio-unitario">$12.000</p>
+                    </div>
+                    <div class="controles-cantidad">
+                        <label for="cant-prod-1" class="sr-only">Cantidad</label>
+                        <input type="number" id="cant-prod-1" value="1" min="1" max="10">
+                    </div>
+                    <div class="subtotal-item">
+                        <p><strong>$12.000</strong></p>
+                    </div>
+                    <button class="btn-eliminar" aria-label="Eliminar Cilindro GLP 11 kg del carrito">✖</button>
+                </article>
+
+                <!-- Producto 2 -->
+                <article class="item-carrito">
+                    <img src="assets/img/mangueragas1.png" alt="Manguera gas 1.5 m">
+                    <div class="detalles-item">
+                        <h3>Manguera gas 1.5 m</h3>
+                        <p class="precio-unitario">$3.990</p>
+                    </div>
+                    <div class="controles-cantidad">
+                        <label for="cant-prod-2" class="sr-only">Cantidad</label>
+                        <input type="number" id="cant-prod-2" value="2" min="1" max="10">
+                    </div>
+                    <div class="subtotal-item">
+                        <p><strong>$7.980</strong></p>
+                    </div>
+                    <button class="btn-eliminar" aria-label="Eliminar Manguera gas 1.5 m del carrito">✖</button>
+                </article>
+
+            </section>
+
+            <!-- Resumen de la compra -->
+            <aside class="resumen-compra">
+                <h2>Resumen del Pedido</h2>
+                <div class="fila-resumen">
+                    <span>Subtotal:</span>
+                    <span>$19.980</span>
+                </div>
+                <div class="fila-resumen">
+                    <span>Despacho:</span>
+                    <span>$2.500</span>
+                </div>
+                <div class="fila-resumen total">
+                    <span>Total a Pagar:</span>
+                    <span>$22.480</span>
+                </div>
+                
+                <button class="boton btn-pagar">Proceder al Pago</button>
+                <a href="productos.html" class="btn-seguir-comprando">← Seguir comprando</a>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="pie-sitio">
+        <p><strong>Gas El Volcan</strong></p>
+        <address>Contacto: <a href="mailto:contacto@gaselvolcan.cl">contacto@gaselvolcan.cl</a></address>
+        <p><small>Proyecto académico · Desarrollo FullStack II</small></p>
+    </footer>
+
+
+<dialog id="modal-pago" class="modal-pago">
+    <div class="contenido-modal">
+        <div class="cabecera-modal">
+            <h2>Finalizar Compra</h2>
+            <span class="badge-seguro">🔒 Pago 100% Seguro</span>
+        </div>
+        
+        <form id="form-pasarela">
+            <fieldset class="seccion-form">
+                <legend>1. Datos de Envío</legend>
+                
+                <div class="fila-doble">
+                    <div>
+                        <label for="envio-nombre">Nombre *</label>
+                        <input type="text" id="envio-nombre" placeholder="Juan" required>
+                    </div>
+                    <div>
+                        <label for="envio-apellido">Apellido *</label>
+                        <input type="text" id="envio-apellido" placeholder="Pérez" required>
+                    </div>
+                </div>
+
+                <label for="envio-direccion">Dirección de entrega *</label>
+                <input type="text" id="envio-direccion" placeholder="Ej: Av. Las Condes 1234, Depto 502" required>
+
+                <label for="envio-telefono">Número de teléfono *</label>
+                <input type="tel" id="envio-telefono" placeholder="+56 9 1234 5678" required>
+            </fieldset>
+
+
+            <fieldset class="seccion-form">
+                <legend>2. Tarjeta de Crédito / Débito</legend>
+                
+                <label for="tarjeta-nombre">Nombre del titular *</label>
+                <input type="text" id="tarjeta-nombre" placeholder="JUAN PEREZ" required>
+
+                <label for="tarjeta-numero">Número de tarjeta *</label>
+                <input type="text" id="tarjeta-numero" placeholder="1234 5678 9012 3456" maxlength="19" required>
+
+                <div class="fila-doble">
+                    <div>
+                        <label for="tarjeta-expira">Expiración *</label>
+                        <input type="text" id="tarjeta-expira" placeholder="MM/AA" maxlength="5" required>
+                    </div>
+                    <div>
+                        <label for="tarjeta-cvv">CVV *</label>
+                        <input type="password" id="tarjeta-cvv" placeholder="123" maxlength="4" required>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="acciones-modal">
+                <button type="button" id="btn-cancelar-pago" class="btn-cancelar">Cancelar</button>
+                <button type="submit" id="btn-confirmar-pago" class="boton">Pagar y Confirmar</button>
+            </div>
+        </form>
+    </div>
+</dialog>
+
+<script src="assets/js/carrito.js"></script>
+</body>
+</html>
