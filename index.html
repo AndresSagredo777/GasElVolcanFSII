@@ -9,65 +9,73 @@
     <link rel="stylesheet" href="assets/css/estilo.css">
 </head>
 
-<header class="cabecera">
-    <a class="marca" href="index.html">Gas El Volcan</a>
-    <nav aria-label="Navegacion principal">
-        <ul class="menu">
-            <li>><a href="index.html" aria-current="page">Inicio</a></li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="productos.html">Productos</a></li>
-            <li><a href="cobertura.html">Cobertura</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
-</header>
+<body>
+    <header class="cabecera">
+        <a class="marca" href="index.html">Gas El Volcan</a>
+        <button class="boton-menu" id="boton-menu" aria-expanded="false" aria-controls="menu-principal">
+            <span class="linea-menu"></span>
+            <span class="linea-menu"></span>
+            <span class="linea-menu"></span>
+            <span class="texto-oculto">Abrir menú</span>
+        </button>
+        <nav aria-label="Navegacion principal">
+            <ul class="menu" id="menu-principal">
+                <li>><a href="index.html" aria-current="page">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="cobertura.html">Cobertura</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<main id="contenido-principal">
-    <section class="presentacion">
-        <p class="etiqueta">Gas a domicilio</p>
-        <h1>Gas en tu puerta</h1>
-        <p>Distribución de cilindros de gas licuado con entrega rápida y segura.</p>
-        <a class="boton" href="productos.html">Ver productos</a>
-    </section>
+    <main id="contenido-principal">
+        <section class="presentacion">
+            <p class="etiqueta">Gas a domicilio</p>
+            <h1>Gas en tu puerta</h1>
+            <p>Distribución de cilindros de gas licuado con entrega rápida y segura.</p>
+            <a class="boton" href="productos.html">Ver productos</a>
+        </section>
 
-    <section aria-labelledby="titulo-productos">
-        <h2 id="titulo-productos">Nuestros productos</h2>
-        <div class="grilla-tarjetas">
-            <article class="tarjeta">
-                <img src="assets/img/cilindro5kg.jpg" alt="Cilindro de gas de 5 kilogramos">
-                <h3>Cilindro 5 kg</h3>
-                <p>Ideal para uso doméstico ocasional o espacios pequeños.</p>
-                <a href="producto-detalle-1.html">Ver detalle</a>
-            </article>
+        <section aria-labelledby="titulo-productos">
+            <h2 id="titulo-productos">Nuestros productos</h2>
+            <div class="grilla-tarjetas">
+                <article class="tarjeta">
+                    <img src="assets/img/cilindro5kg.jpg" alt="Cilindro de gas de 5 kilogramos">
+                    <h3>Cilindro 5 kg</h3>
+                    <p>Ideal para uso doméstico ocasional o espacios pequeños.</p>
+                    <a href="producto-detalle-1.html">Ver detalle</a>
+                </article>
 
-            <article class="tarjeta">
-                <img src="assets/img/cilindro15kg.png" alt="Cilindro de gas de 15 kilogramos">
-                <h3>Cilindro 15 kg</h3>
-                <p>El más solicitado para cocina y calefacción del hogar.</p>
-                <a href="producto-detalle-2.html">Ver detalle</a>
-            </article>
+                <article class="tarjeta">
+                    <img src="assets/img/cilindro15kg.png" alt="Cilindro de gas de 15 kilogramos">
+                    <h3>Cilindro 15 kg</h3>
+                    <p>El más solicitado para cocina y calefacción del hogar.</p>
+                    <a href="producto-detalle-2.html">Ver detalle</a>
+                </article>
 
-            <article class="tarjeta">
-                <img src="assets/img/cilindro45kg.png" alt="Cilindro de gas industrial de 45 kilogramos">
-                <h3>Cilindro 45 kg</h3>
-                <p>Pensado para negocios, restaurantes y uso industrial.</p>
-                <a href="producto-detalle-3.html">Ver detalle</a>
-            </article>
-        </div>
-    </section>
+                <article class="tarjeta">
+                    <img src="assets/img/cilindro45kg.png" alt="Cilindro de gas industrial de 45 kilogramos">
+                    <h3>Cilindro 45 kg</h3>
+                    <p>Pensado para negocios, restaurantes y uso industrial.</p>
+                    <a href="producto-detalle-3.html">Ver detalle</a>
+                </article>
+            </div>
+        </section>
 
-    <aside class="aviso" aria-labelledby="titulo-aviso">
-        <h2 id="titulo-aviso">¿Quieres hacer tu pedido?</h2>
-        <p>Muy pronto habilitaremos pedidos en línea. Mientras tanto, contáctanos por teléfono o WhatsApp.</p>
-    </aside>
-</main>
+        <aside class="aviso" aria-labelledby="titulo-aviso">
+            <h2 id="titulo-aviso">¿Quieres hacer tu pedido?</h2>
+            <p>Muy pronto habilitaremos pedidos en línea. Mientras tanto, contáctanos por teléfono o WhatsApp.</p>
+        </aside>
+    </main>
 
-<footer class="pie-sitio">
-    <p><strong>Gas El Volcan</strong></p>
-    <address>Contacto: <a href="mailto:contacto@gaselvolcan.cl">contacto@gaselvolcan.cl</a></address>
-    <p><small>· 9 9999 9999</small></p>
-    <p><small>Proyecto académico · Desarrollo FullStack II</small></p>
-</footer>
+    <script src="assets/js/menu.js"></script>
+
+    <footer class="pie-sitio">
+        <p><strong>Gas El Volcan</strong></p>
+        <address>Contacto: <a href="mailto:contacto@gaselvolcan.cl">contacto@gaselvolcan.cl</a></address>
+        <p><small>· 9 9999 9999</small></p>
+        <p><small>Proyecto académico · Desarrollo FullStack II</small></p>
+    </footer>
 </body>
-
 </html>
