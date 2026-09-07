@@ -11,6 +11,12 @@
 # Día 04-09-26
 # Head y footer a los HTML.
 ### ---------- ###
+# Día 06-09-26
+# Implementación de menú hamburguesa en todos los htmls.
+# Completación de los htmls restantes.
+# Se removio contacto.html.
+# Se agrego lógica js para los htmls
+### ---------- ###
 # Día 05-09-26
 # Main de producto con los cilindros de gas.
 # Main de pruducto con los accesorios.
