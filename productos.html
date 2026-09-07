@@ -19,6 +19,7 @@
             <li><a href="productos.html" aria-current="page">Productos</a></li>
             <li><a href="cobertura.html">Cobertura</a></li>
             <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="carrito.html">Carrito</a></li>
         </ul>
     </nav>
 </header>
@@ -35,28 +36,56 @@
                     <img src="assets/img/cilindro5kg.jpg" alt="Cilindro de gas de 5 kilogramos">
                     <p>Para uso residencial (cocina, calefacción pequeña).</p>
                     <p class="precio">Precio: $6.500</p>
-                    <button type="button">Añadir al pedido</button>
+                    <button type="button" class="btn-agregar" 
+                        data-id="1" 
+                        data-nombre="Cilindro GLP 5 kg" 
+                        data-precio="6500" 
+                        data-img="assets/img/cilindro5kg.jpg" 
+                        data-stock="80">
+                        Añadir al pedido
+                    </button>
                 </article>
                 <article class="Producto">
                     <h3>Cilindro GLP 11 kg</h3>
                     <img src="assets/img/cilindro11kg.png" alt="Cilindro de gas de 11 kilogramos">
                     <p>Cilindro estándar doméstico. El más utilizado en hogares chilenos.</p>
                     <p class="precio">Precio: $12.000</p>
-                    <button type="button">Añadir al pedido</button>
+                    <button type="button" class="btn-agregar" 
+                        data-id="2" 
+                        data-nombre="Cilindro GLP 11 kg" 
+                        data-precio="12000" 
+                        data-img="assets/img/cilindro11kg.png" 
+                        data-stock="200">
+                        Añadir al pedido
+                    </button>
                 </article>
                 <article class="Producto">
                     <h3>Cilindro GLP 15 kg</h3>
                     <img src="assets/img/cilindro15kg.png" alt="Cilindro de gas de 15 kilogramos">
                     <p>Mayor capacidad para hogares de alto consumo o locales pequeños.</p>
                     <p class="precio">Precio: $16.000</p>
-                    <button type="button">Añadir al pedido</button>
+                    <button type="button" class="btn-agregar" 
+                        data-id="3" 
+                        data-nombre="Cilindro GLP 15 kg" 
+                        data-precio="16000" 
+                        data-img="assets/img/cilindro15kg.png" 
+                        data-stock="90">
+                        Añadir al pedido
+                    </button>
                 </article>
                 <article class="Producto">
                     <h3>Cilindro GLP 45 kg</h3>
                     <img src="assets/img/cilindro45kg.png" alt="Cilindro de gas industrial de 45 kilogramos">
                     <p>Cilindro industrial para uso comercial.</p>
                     <p class="precio">Precio: $45.000</p>
-                    <button type="button">Añadir al pedido</button>
+                    <button type="button" class="btn-agregar" 
+                        data-id="4" 
+                        data-nombre="Cilindro GLP 45 kg" 
+                        data-precio="45000" 
+                        data-img="assets/img/cilindro45kg.png" 
+                        data-stock="30">
+                        Añadir al pedido
+                    </button>
                 </article>
             </div>
         </section>
@@ -71,21 +100,42 @@
                     <img src="assets/img/reguladordomestico.png" alt="Regulador doméstico estándar">
                     <p>Para cilindros de 5, 11 y 15 kg. Presión de salida 28 mbar.</p>
                     <p class="precio">Precio: $8.990</p>
-                    <button type="button">Añadir al pedido</button>
+                    <button type="button" class="btn-agregar" 
+                        data-id="5" 
+                        data-nombre="Regulador doméstico estándar" 
+                        data-precio="8990" 
+                        data-img="assets/img/reguladordomestico.png" 
+                        data-stock="45">
+                        Añadir al pedido
+                    </button>
                 </article>
                 <article class="Producto">
                     <h3>Regulador de alta presión</h3>
                     <img src="assets/img/reguladoraltapresion.png" alt="Regulador de alta presión">
                     <p>Regulador para cocinas industriales o equipos de mayor consumo.</p>
                     <p class="precio">Precio: $18.990</p>
-                    <button type="button">Añadir al pedido</button>
+                    <button type="button" class="btn-agregar" 
+                        data-id="6" 
+                        data-nombre="Regulador de alta presión" 
+                        data-precio="18990" 
+                        data-img="assets/img/reguladoraltapresion.png" 
+                        data-stock="12">
+                        Añadir al pedido
+                    </button>
                 </article>
                 <article class="Producto">
                     <h3>Regulador dual (2 salidas)</h3>
                     <img src="assets/img/reguladordual.png" alt="Regulador dual con dos salidas">
                     <p>Permite conectar dos artefactos simultáneamente al mismo cilindro.</p>
                     <p class="precio">Precio: $14.990</p>
-                    <button type="button">Añadir al pedido</button>
+                    <button type="button" class="btn-agregar" 
+                        data-id="7" 
+                        data-nombre="Regulador dual (2 salidas)" 
+                        data-precio="14990" 
+                        data-img="assets/img/reguladordual.png" 
+                        data-stock="18">
+                        Añadir al pedido
+                    </button>
                 </article>
 
 
@@ -94,28 +144,56 @@
                     <img src="assets/img/mangueragas1.png" alt="Manguera gas 1.5 m">
                     <p>Manguera flexible homologada. Diámetro interior 9mm. Compatible con reguladores estándar..</p>
                     <p class="precio">Precio: $3.990</p>
-                    <button type="button">Añadir al pedido</button>
+                    <button type="button" class="btn-agregar" 
+                        data-id="8" 
+                        data-nombre="Manguera gas 1.5 m" 
+                        data-precio="3990" 
+                        data-img="assets/img/mangueragas1.png" 
+                        data-stock="80">
+                        Añadir al pedido
+                    </button>
                 </article>
                 <article class="Producto">
                     <h3>Manguera gas 3 m</h3>
                     <img src="assets/img/mangueragas3.png" alt="Manguera gas 3 m">
                     <p>Manguera larga para instalaciones donde el artefacto está alejado del cilindro.</p>
                     <p class="precio">Precio: $6.990</p>
-                    <button type="button">Añadir al pedido</button>
+                    <button type="button" class="btn-agregar" 
+                        data-id="9" 
+                        data-nombre="Manguera gas 3 m" 
+                        data-precio="6990" 
+                        data-img="assets/img/mangueragas3.png" 
+                        data-stock="50">
+                        Añadir al pedido
+                    </button>
                 </article>
                 <article class="Producto">
                     <h3>Abrazadera metálica</h3>
                     <img src="assets/img/abrazaderametalica.png" alt="Abrazadera metálica">
                     <p>Abrazadera de acero para asegurar la conexión manguera-regulador y manguera-artefacto.</p>
                     <p class="precio">Precio: $990</p>
-                    <button type="button">Añadir al pedido</button>
+                    <button type="button" class="btn-agregar" 
+                        data-id="10" 
+                        data-nombre="Abrazadera metálica" 
+                        data-precio="990" 
+                        data-img="assets/img/abrazaderametalica.png" 
+                        data-stock="200">
+                        Añadir al pedido
+                    </button>
                 </article>
                 <article class="Producto">
                     <h3>Kit conexión completo</h3>
                     <img src="assets/img/kitcompleto.png" alt="Kit conexión completo">
                     <p>Todo lo necesario para instalar un cilindro nuevo. (regulador + manguera 1.5m + abrazaderas)</p>
                     <p class="precio">Precio: $12.990</p>
-                    <button type="button">Añadir al pedido</button>
+                    <button type="button" class="btn-agregar" 
+                        data-id="11" 
+                        data-nombre="Kit conexión completo" 
+                        data-precio="12990" 
+                        data-img="assets/img/kitcompleto.png" 
+                        data-stock="25">
+                        Añadir al pedido
+                    </button>
                 </article>
 
 
@@ -124,21 +202,42 @@
                     <img src="assets/img/carrocilindro.png" alt="Carro porta cilindro 11/15 kg">
                     <p>Carro metálico con ruedas para transportar cilindros dentro del hogar con seguridad.</p>
                     <p class="precio">Precio: $12.990</p>
-                    <button type="button">Añadir al pedido</button>
+                    <button type="button" class="btn-agregar" 
+                        data-id="12" 
+                        data-nombre="Carro porta cilindro 11/15 kg" 
+                        data-precio="12990" 
+                        data-img="assets/img/carrocilindro.png" 
+                        data-stock="20">
+                        Añadir al pedido
+                    </button>
                 </article>
                 <article class="Producto">
                     <h3>Tapa protectora para válvula</h3>
                     <img src="assets/img/tapaprotectora.png" alt="Tapa protectora para válvula">
                     <p>Tapa de plástico ABS para proteger la válvula del cilindro durante el transporte.</p>
                     <p class="precio">Precio: $1.490</p>
-                    <button type="button">Añadir al pedido</button>
+                    <button type="button" class="btn-agregar" 
+                        data-id="13" 
+                        data-nombre="Tapa protectora para válvula" 
+                        data-precio="1490" 
+                        data-img="assets/img/tapaprotectora.png" 
+                        data-stock="60">
+                        Añadir al pedido
+                    </button>
                 </article>
                 <article class="Producto">
                     <h3>Detector de gas a batería</h3>
                     <img src="assets/img/detectorgas.png" alt="Detector de gas a batería">
                     <p>Sensor electroquímico. Alarma sonora y visual ante fugas.</p>
                     <p class="precio">Precio: $19.990</p>
-                    <button type="button">Añadir al pedido</button>
+                    <button type="button" class="btn-agregar" 
+                        data-id="14" 
+                        data-nombre="Detector de gas a batería" 
+                        data-precio="19990" 
+                        data-img="assets/img/detectorgas.png" 
+                        data-stock="8">
+                        Añadir al pedido
+                    </button>
                 </article>
             </div>
         </section>
@@ -149,6 +248,8 @@
     <address>Contacto: <a href="mailto:contacto@gaselvolcan.cl">contacto@gaselvolcan.cl</a></address>
     <p><small>Proyecto académico · Desarrollo FullStack II</small></p>
 </footer>
-</body>
 
+<script src="assets/js/carrito.js"></script>
+
+</body>
 </html>
