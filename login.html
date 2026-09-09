@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Iniciar sesión en Gas El Volcan">
+    <title>Iniciar Sesión | Gas El Volcan</title>
+    <link rel="stylesheet" href="assets/css/estilo.css">
+    <style>
+        /* Pequeño ajuste exclusivo para centrar la caja de login */
+        .contenedor-login {
+            max-width: 400px;
+            margin: 4rem auto;
+            /* Reutilizamos el estilo de tu panel de resumen */
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .contenedor-login h1 {
+            color: var(--color-secundario);
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Estilos reciclados de tu formulario de pago */
+        .grupo-form {
+            margin-bottom: 1.2rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .grupo-form label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--color-secundario);
+            margin-bottom: 0.4rem;
+        }
+
+        .grupo-form input {
+            padding: 0.6rem;
+            border: 1px solid #cbd5e1;
+            border-radius: 4px;
+            font-size: 0.95rem;
+        }
+
+        .grupo-form input:focus {
+            outline: none;
+            border-color: var(--color-primario);
+        }
+
+        .enlace-registro {
+            display: block;
+            text-align: center;
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .enlace-registro a {
+            color: var(--color-primario);
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .enlace-registro a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="cabecera">
+        <a class="marca" href="index.html">Gas El Volcan</a>
+        <button class="boton-menu" id="boton-menu" aria-expanded="false" aria-controls="menu-principal">
+            <span class="linea-menu"></span>
+            <span class="linea-menu"></span>
+            <span class="linea-menu"></span>
+            <span class="texto-oculto">Abrir menú</span>
+        </button>
+        <nav aria-label="Navegacion principal">
+            <ul class="menu" id="menu-principal">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="cobertura.html">Cobertura</a></li>
+                <li><a href="carrito.html">Carrito</a></li>
+                <li><a href="login.html" aria-current="page" style="color: var(--color-primario); font-weight: bold;">Ingresar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido-principal" style="flex: 1;">
+        <section class="contenedor-login">
+            <h1>Iniciar Sesión</h1>
+            
+            <form id="form-login">
+                <div class="grupo-form">
+                    <label for="login-email">Correo Electrónico</label>
+                    <input type="email" id="login-email" placeholder="ejemplo@correo.com" required>
+                </div>
+                
+                <div class="grupo-form">
+                    <label for="login-password">Contraseña</label>
+                    <input type="password" id="login-password" placeholder="********" required>
+                </div>
+                
+                <button type="submit" class="boton" style="width: 100%; margin-top: 1rem;">Ingresar a mi cuenta</button>
+            </form>
+
+            <p class="enlace-registro">
+                ¿No tienes cuenta? <a href="#">Regístrate aquí</a>
+            </p>
+        </section>
+    </main>
+
+    <footer class="pie-sitio">
+        <p><strong>Gas El Volcan</strong></p>
+        <address>Contacto: <a href="mailto:gaselvolcan@gmail.com">gaselvolcan@gmail.com"</a></address>
+        <p><small>Proyecto académico · Desarrollo FullStack II</small></p>
+    </footer>
+
+    <script src="assets/js/menu.js"></script>
+    <!-- Aquí enlazaremos tu futuro script de login -->
+    <script src="assets/js/login.js"></script>
+</body>
+</html>

@@ -36,3 +36,4 @@
 # Correcion de la fucion del merge.
 # Correcion del css general.
 # Menu hamburguesa para carrito y producto.
+# Se agrego de forma completa el login
