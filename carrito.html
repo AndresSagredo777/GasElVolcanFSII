@@ -10,18 +10,22 @@
 </head>
 
 <body>
-    <!-- Enlace de salto de contenido para accesibilidad -->
     <a href="#contenido-carrito" class="salto-contenido">Saltar al contenido principal</a>
 
     <header class="cabecera">
         <a class="marca" href="index.html">Gas El Volcan</a>
+        <button class="boton-menu" id="boton-menu" aria-expanded="false" aria-controls="menu-principal">
+            <span class="linea-menu"></span>
+            <span class="linea-menu"></span>
+            <span class="linea-menu"></span>
+            <span class="texto-oculto">Abrir menú</span>
+        </button>
         <nav aria-label="Navegacion principal">
-            <ul class="menu">
+            <ul class="menu" id="menu-principal">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="nosotros.html">Nosotros</a></li>
                 <li><a href="productos.html">Productos</a></li>
                 <li><a href="cobertura.html">Cobertura</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
                 <li><a href="carrito.html" aria-current="page">Carrito</a></li>
             </ul>
         </nav>
@@ -94,7 +98,7 @@
 
     <footer class="pie-sitio">
         <p><strong>Gas El Volcan</strong></p>
-        <address>Contacto: <a href="mailto:contacto@gaselvolcan.cl">contacto@gaselvolcan.cl</a></address>
+        <address>Contacto: <a href="mailto:gaselvolcan@gmail.cl">gaselvolcan@gmail.cl</a></address>
         <p><small>Proyecto académico · Desarrollo FullStack II</small></p>
     </footer>
 
@@ -113,39 +117,44 @@
                 <div class="fila-doble">
                     <div>
                         <label for="envio-nombre">Nombre *</label>
-                        <input type="text" id="envio-nombre" placeholder="Juan" required>
+                        <!-- Solo letras y espacios -->
+                        <input type="text" id="envio-nombre" placeholder="Juan" required pattern="[A-Za-záéíóúÁÉÍÓÚñÑ\s]+" title="Solo se permiten letras y espacios">
                     </div>
                     <div>
                         <label for="envio-apellido">Apellido *</label>
-                        <input type="text" id="envio-apellido" placeholder="Pérez" required>
+                        <!-- Solo letras y espacios -->
+                        <input type="text" id="envio-apellido" placeholder="Pérez" required pattern="[A-Za-záéíóúÁÉÍÓÚñÑ\s]+" title="Solo se permiten letras y espacios">
                     </div>
                 </div>
 
                 <label for="envio-direccion">Dirección de entrega *</label>
-                <input type="text" id="envio-direccion" placeholder="Ej: Av. Las Condes 1234, Depto 502" required>
+                <input type="text" id="envio-direccion" placeholder="Ej: Av. Las Condes 1234, Depto 502" required title="Ingrese una dirección de entrega válida">
 
                 <label for="envio-telefono">Número de teléfono *</label>
-                <input type="tel" id="envio-telefono" placeholder="+56 9 1234 5678" required>
+                <!-- Permite el signo + y números, entre 8 y 11 caracteres -->
+                <input type="tel" id="envio-telefono" placeholder="+56 9 1234 5678" required pattern="[\+0-9\s]{8,11}" title="Debe contener entre 8 y 11 números, puede incluir el signo + y espacios">
             </fieldset>
-
 
             <fieldset class="seccion-form">
                 <legend>2. Tarjeta de Crédito / Débito</legend>
                 
                 <label for="tarjeta-nombre">Nombre del titular *</label>
-                <input type="text" id="tarjeta-nombre" placeholder="JUAN PEREZ" required>
+                <input type="text" id="tarjeta-nombre" placeholder="JUAN PEREZ" required pattern="[A-Za-záéíóúÁÉÍÓÚñÑ\s]+" title="Solo se permiten letras y espacios">
 
                 <label for="tarjeta-numero">Número de tarjeta *</label>
-                <input type="text" id="tarjeta-numero" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                <!-- Solo números y espacios -->
+                <input type="text" id="tarjeta-numero" placeholder="1234 5678 9012 3456" maxlength="16" required pattern="[0-9\s]{16,16}" title="Ingrese un número de tarjeta válido">
 
                 <div class="fila-doble">
                     <div>
                         <label for="tarjeta-expira">Expiración *</label>
-                        <input type="text" id="tarjeta-expira" placeholder="MM/AA" maxlength="5" required>
+                        <!-- Obliga al formato MM/AA (meses del 01 al 12) -->
+                        <input type="text" id="tarjeta-expira" placeholder="MM/AA" maxlength="5" required pattern="(0[1-9]|1[0-2])\/[0-9]{2}" title="El formato debe ser MM/AA, por ejemplo 12/25">
                     </div>
                     <div>
                         <label for="tarjeta-cvv">CVV *</label>
-                        <input type="password" id="tarjeta-cvv" placeholder="123" maxlength="4" required>
+                        <!-- Estrictamente 3  números -->
+                        <input type="password" id="tarjeta-cvv" placeholder="123" maxlength="4" required pattern="[0-9]{3,3}" title="El CVV debe tener 3 números">
                     </div>
                 </div>
             </fieldset>
@@ -158,6 +167,7 @@
     </div>
 </dialog>
 
+<script src="assets/js/menu.js"></script>
 <script src="assets/js/carrito.js"></script>
 </body>
 </html>

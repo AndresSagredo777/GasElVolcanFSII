@@ -31,3 +31,8 @@
 # Carrito.HTML completado.
 # Css de producto y carrito implementado al 100.
 # Formulario de pago con tarjeta y datos del comprador implementado.
+### ---------- ###
+# Día 08-09-26
+# Correcion de la fucion del merge.
+# Correcion del css general.
+# Menu hamburguesa para carrito y producto.

@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         btnCancelar.addEventListener('click', () => modalPago.close());
 
+        // Este evento SOLO se dispara si las validaciones HTML5 (pattern, required) son exitosas
         formPasarela.addEventListener('submit', (e) => {
             e.preventDefault(); 
             
